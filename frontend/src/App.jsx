@@ -22,12 +22,11 @@ const App = () => {
         draggable
         pauseOnHover
         theme="dark"
-        // Custom styles for close button and toastify
-        toastClassName="bg-emerald-950/30 backdrop-blur-xl border border-emerald-700/50 shadow-lg rounded-xl overflow-hidden"
-        bodyClassName="text-emerald-100 font-medium text-sm flex items-center"
+        toastClassName="bg-emerald-950/30 backdrop-blur-xl border border-emerald-700/50 shadow-lg rounded-xl overflow-hidden max-w-[90vw] sm:max-w-md"
+        bodyClassName="text-emerald-100 font-medium text-xs sm:text-sm flex items-center"
         progressClassName="bg-gradient-to-r from-teal-400 to-emerald-600 h-1"
         closeButton={
-          <span className="text-teal-400 hover:text-teal-200 transition-colors duration-300 cursor-pointer text-lg pl-7">
+          <span className="text-teal-400 hover:text-teal-200 transition-colors duration-300 cursor-pointer text-base sm:text-lg pl-4 sm:pl-7">
             ×
           </span>
         }
@@ -36,11 +35,8 @@ const App = () => {
         <Route path="/" element={<HomeScreen />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        
-        {/* Private Routes */}
         <Route path="" element={<PrivateRoute />}>
           <Route path="/profile" element={<Profile />} />
-          {/* You can add more private routes here if needed */}
         </Route>
       </Routes>
     </>
