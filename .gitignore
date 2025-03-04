@@ -4,4 +4,4 @@ node_modules
 .vscode
 .cache
 dist
-docker-compose
+docker-compose.yml
