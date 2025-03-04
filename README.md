@@ -1,3 +1,5 @@
+Here's the updated README file with Docker information added:
+
 # 🚀 MERN Authentication Project
 
 A robust, full-stack authentication system built with the MERN (MongoDB, Express.js, React.js, Node.js) stack. This project showcases secure user authentication, protected routes, and a modern, responsive and enhanced UI.
@@ -14,6 +16,7 @@ A robust, full-stack authentication system built with the MERN (MongoDB, Express
 - 🍞 Toast notifications for user feedback
 - 🔄 State management with Redux Toolkit
 - 🚦 React Router for seamless navigation
+- 🐳 Dockerized for easy deployment and development
 
 ## 🛠️ Tech Stack
 
@@ -36,6 +39,11 @@ A robust, full-stack authentication system built with the MERN (MongoDB, Express
 - Cookie-parser
 - Express Async Handler
 
+### DevOps
+
+- Docker
+- Docker Compose
+
 ## 📁 Project Structure
 
 ```
@@ -47,6 +55,7 @@ mern-auth/
 │  ├─ models/            # Database models
 │  ├─ routes/            # API routes
 │  ├─ utils/             # Utility functions
+│  ├─ Dockerfile         # Docker configuration for backend
 │  └─ server.js          # Main server file
 ├─ frontend/             # Client-side code
 │  ├─ public/            # Static files
@@ -58,12 +67,16 @@ mern-auth/
 │  │  ├─ App.jsx         # Main React component
 │  │  └─ main.jsx        # Entry point
 │  ├─ .env               # Frontend environment variables
+│  ├─ Dockerfile         # Docker configuration for frontend
 │  └─ vite.config.js     # Vite configuration
 ├─ .env                  # Backend environment variables
+├─ docker-compose.yml    # Docker Compose configuration
 └─ package.json          # Project dependencies and scripts
 ```
 
 ## 🚀 Getting Started
+
+### Running Locally
 
 1. Clone the repository:
 
@@ -87,12 +100,33 @@ mern-auth/
    npm run dev
    ```
 
+### Running with Docker
+
+1. Ensure Docker and Docker Compose are installed on your system.
+
+2. Clone the repository:
+
+   ```
+   git clone https://github.com/rusirukalu/mern-auth.git
+   cd mern-auth
+   ```
+
+3. Build and run the Docker containers:
+
+   ```
+   docker-compose up --build
+   ```
+
+4. Access the application at http://localhost:3000
+
 ## 📜 Available Scripts
 
 - `npm run dev`: Start both frontend and backend in development mode
 - `npm run server`: Run only the backend server
 - `npm run client`: Run only the frontend client
 - `npm start`: Start the production server
+- `docker-compose up`: Start the application using Docker
+- `docker-compose down`: Stop and remove Docker containers
 
 ## 🔒 Security Features
 
@@ -138,6 +172,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - The MERN stack community for excellent documentation and resources
 - Tailwind CSS for making styling a breeze
 - Vercel for simplified deployment
+- Docker for containerization support
 
 ---
 
